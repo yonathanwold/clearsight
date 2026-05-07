@@ -40,7 +40,7 @@ http://localhost:5173
 The application is organized around clear React components and small utility files:
 
 - `src/App.jsx` manages the main transaction state, loads saved data, saves updates to LocalStorage, and passes derived data into the UI sections.
-- `src/components/` contains reusable UI sections including the header, dashboard cards, transaction form, charts, insights panel, transaction list, empty state, and icon component.
+- `src/components/` contains reusable UI sections including the header, dashboard cards, transaction form, charts, insights panel, transaction list, and empty state.
 - `src/utils/calculations.js` contains the financial calculations for totals, savings rate, category breakdowns, monthly trends, and rule-based insights.
 - `src/utils/storage.js` handles LocalStorage loading and saving.
 - `src/utils/formatters.js` keeps currency, percentage, date, and month formatting consistent.
@@ -53,19 +53,20 @@ Charts are generated programmatically from the transaction data, so adding or de
 
 - Tool: OpenAI Codex / ChatGPT
 - How I used it:
-  - Scaffolded the initial React component structure
-  - Helped organize the project into reusable components
-  - Helped design LocalStorage persistence
-  - Helped create financial calculation helper functions
-  - Helped transform transaction data into Recharts-friendly chart data
-  - Helped improve the visual design into a cleaner dashboard layout
-  - Helped revise README documentation and project organization
+  - Used it as a coding assistant while I planned and built the app
+  - Asked for suggestions on how to split the project into components and utility files
+  - Used it to check my approach for LocalStorage persistence and derived dashboard calculations
+  - Asked for help thinking through Recharts data shapes for category and monthly charts
+  - Used it for debugging help when checking form validation and state updates
+  - Used it to review wording and organization in the README
 - Prompts that worked well:
-  - "Build a frontend-only personal finance dashboard using React, Vite, JavaScript, Recharts, LocalStorage, and plain CSS."
-  - "Keep the code beginner/intermediate friendly so I can explain it during a live interview."
-  - "Make the UI clean and realistic for a student-built finance dashboard without making the logic too complex."
-  - "Document AI usage clearly in the README."
-- What I reviewed manually:
+  - "How should I structure a React finance dashboard with components and utility files?"
+  - "What is a simple way to save transactions in LocalStorage and load them when the app starts?"
+  - "How can I convert transaction data into chart data for Recharts?"
+  - "Review this README section and make sure the AI usage documentation is clear."
+- What I did and reviewed manually:
+  - Chose the final project idea and feature scope
+  - Reviewed and adjusted the component structure
   - Component state flow
   - Financial calculations
   - LocalStorage behavior
@@ -73,6 +74,7 @@ Charts are generated programmatically from the transaction data, so adding or de
   - Form validation
   - Responsive layout
   - Visual hierarchy and spacing
+  - Ran the app locally and tested adding, deleting, refreshing, and validation behavior
 
 ## Key Design Decisions
 
@@ -95,9 +97,9 @@ Charts are generated programmatically from the transaction data, so adding or de
 - Making the UI polished without overcomplicating the code:
   - I kept the visual complexity mostly in CSS and kept the React components readable.
 - Where AI helped:
-  - AI helped with component scaffolding, chart data transformations, CSS organization, and README wording.
+  - AI helped when I wanted a second opinion on structure, chart data transformations, LocalStorage behavior, and README wording.
 - Where AI fell short:
-  - I still needed to review the design, simplify parts of the structure, verify the app in the browser, and make sure the final code stayed understandable for an interview walkthrough.
+  - AI suggestions still needed to be reviewed and adjusted. I simplified parts of the design, checked the calculations, verified the app in the browser, and made sure the final code was understandable enough for a live walkthrough.
 
 ## What I'd Improve With More Time
 
